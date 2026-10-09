@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            padding: 40px 15px;
+        }
+        .card {
+            max-width: 420px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+        input, button {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            margin: 8px 0;
+        }
+        button {
+            background: #1769aa;
+            color: white;
+            border: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>User Registration</h2>
+
+        <form method="POST">
+            <input name="full_name" placeholder="Full Name"
+                   maxlength="100" required>
+            <input name="email" type="email" placeholder="Email"
+                   maxlength="255" required>
+            <input name="phone" placeholder="Phone"
+                   maxlength="20">
+            <input name="city" placeholder="City" maxlength="100">
+
+            <button type="submit">Submit Details</button>
+        </form>
+
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
